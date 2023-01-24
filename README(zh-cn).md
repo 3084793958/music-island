@@ -7,6 +7,8 @@ You are reading the introduction in Chinese. Check the English version at [READM
 
 请在Linux上运行
 
+pyinstaller打包 请在'Releases'中下载
+
 使用模块：
 [
 
@@ -49,3 +51,7 @@ PyQt5
 7:调节音量
 
 8:2,3,4在鼠标经过时变成蓝色
+
+详细介绍请查看bilibili
+
+希望它能够帮助你
