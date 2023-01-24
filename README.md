@@ -31,9 +31,9 @@ There are two modes (light mode/dark mode) (default light color)
 
 You can drag and drop files to play (non audio files will be automatically filtered)
 
-![1](https://user-images.githubusercontent.com/100999485/214223715-cca294fe-71d8-41b5-8080-2856f1825e1e.png)
+![1](https://usercontent.githubfast.com/user-images/100999485/214223715-cca294fe-71d8-41b5-8080-2856f1825e1e.png)
 
-![2](https://user-images.githubusercontent.com/100999485/214223677-299477c4-9deb-4862-a06a-729d5a09340f.png)
+![2](https://usercontent.githubfast.com/user-images/100999485/214223677-299477c4-9deb-4862-a06a-729d5a09340f.png)
 
 1:When the music is playing, it swings left and right. When it stops, it is still. Left click to call out progress bar 6, and middle click to remove the music being played from the music list
 
@@ -51,6 +51,6 @@ You can drag and drop files to play (non audio files will be automatically filte
 
 8:2,3,4 turns blue when the mouse passes
 
-For more information,please check bilibili
+For more information,please check [bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
 
 I hope it can help you.
