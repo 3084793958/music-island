@@ -9,7 +9,7 @@ Please run it on linux
 
 pyinstaller package Please download it in 'Releases'
 
-使用模块： [
+Used module： [
 
 os
 
