@@ -5,9 +5,9 @@
 
 You are reading the introduction in English. Please check the Chinese version at [README(zh-cn).md](README(zh-cn).md)
 
-请在Linux上运行
+Please run it on linux
 
-pyinstaller打包 请在'Releases'中下载
+pyinstaller package Please download it in 'Releases'
 
 使用模块： [
 
@@ -23,34 +23,34 @@ PyQt5
 
 ]
 
-你可以复制./'other languages'文件夹中的语言文件，替换./files/data/main.txt(默认简体中文)
+You can copy./' Other languages' folder, replace/ Files/data/main.txt (default Simplified Chinese)
 
-当然，你也可以自己制作
+Of course, you can also make it yourself
 
-拥有两种模式(浅色模式/深色模式)(默认浅色)
+There are two modes (light mode/dark mode) (default light color)
 
-你可以拖拽文件进行播放(会自动过滤非音频文件)
+You can drag and drop files to play (non audio files will be automatically filtered)
 
 ![1](https://user-images.githubusercontent.com/100999485/214223715-cca294fe-71d8-41b5-8080-2856f1825e1e.png)
 
 ![2](https://user-images.githubusercontent.com/100999485/214223677-299477c4-9deb-4862-a06a-729d5a09340f.png)
 
-1:当音乐播放时左右摆动，停止时静止。左键呼出进度条6，中键将正在播放的音乐从音乐列表中移除
+1:When the music is playing, it swings left and right. When it stops, it is still. Left click to call out progress bar 6, and middle click to remove the music being played from the music list
 
-2:播放上一首
+2:Play the previous song
 
-3:开始/暂停
+3:Start/Pause
 
-4:播放下一首
+4:Play the next song
 
-5:调节音量，呼出7，图标随音量大小改变
+5:Adjust the volume, call out 7, and the icon changes with the volume
 
-6:音乐进度条(可拖动)
+6:Music progress bar (can be dragged)
 
-7:调节音量
+7:Adjust the volume
 
-8:2,3,4在鼠标经过时变成蓝色
+8:2,3,4 turns blue when the mouse passes
 
-详细介绍请查看bilibili
+For more information,please check bilibili
 
 I hope it can help you.
