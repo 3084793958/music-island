@@ -226,10 +226,22 @@ class MI(QWidget):
             if event.button() == QtCore.Qt.MidButton and self.sp.movie.gif==1 and len(self.fileslist)!=0:
                 if self.pos().x()+self.mu.pos().x()-self.mouse.pos().x()>-30 and self.pos().x()+self.mu.pos().x()-self.mouse.pos().x()<0 and self.pos().y()+self.mu.pos().y()-self.mouse.pos().y()>-30 and self.pos().y()+self.mu.pos().y()-self.mouse.pos().y()<0:
                     self.bn=True
-                    if self.music_list==len(self.fileslist):
-                        self.music_list-=1
-                    self.play_music.setMedia(QtMultimedia.QMediaContent(QUrl.fromLocalFile((QtCore.QDir.current().absoluteFilePath(self.fileslist[self.music_list-1])))))
                     del self.fileslist[self.music_list-1]
+                    if self.music_list==len(self.fileslist)+1:
+                        self.music_list-=1
+                    if len(self.fileslist)!=0:
+                        self.play_music.setMedia(QtMultimedia.QMediaContent(QUrl.fromLocalFile((QtCore.QDir.current().absoluteFilePath(self.fileslist[self.music_list-1])))))
+                    else:
+                        self.sp.movie = QMovie("files/image/start.gif")
+                        self.mu.movie = QMovie("files/image/musicstop.gif")
+                        self.sp.movie.gif=0
+                        self.sp.setMovie(self.sp.movie)
+                        self.sp.movie.setScaledSize(QSize(35, 35))
+                        self.mu.setMovie(self.mu.movie)
+                        self.mu.movie.setScaledSize(QSize(30, 30))
+                        self.sp.movie.start()
+                        self.sp.movie.stop()
+                        self.mu.movie.start()
                     self.play_music.stop()
                     self.bn=False
         self.mouse_pos = event.globalPos() - self.pos()
@@ -373,17 +385,18 @@ class MI(QWidget):
                 self.music_list=1
     def do_mediaplayer_statechanged(self, state):
         if state == QtMultimedia.QMediaPlayer.StoppedState:
-            if len(self.fileslist)==1:
-                self.sp.movie = QMovie("files/image/start.gif")
-                self.mu.movie = QMovie("files/image/musicstop.gif")
-                self.sp.movie.gif=0
-                self.sp.setMovie(self.sp.movie)
-                self.sp.movie.setScaledSize(QSize(35, 35))
-                self.mu.setMovie(self.mu.movie)
-                self.mu.movie.setScaledSize(QSize(30, 30))
-                self.sp.movie.start()
-                self.sp.movie.stop()
-                self.mu.movie.start()
+            if len(self.fileslist)==0:
+                if self.bn==False:
+                    self.sp.movie = QMovie("files/image/start.gif")
+                    self.mu.movie = QMovie("files/image/musicstop.gif")
+                    self.sp.movie.gif=0
+                    self.sp.setMovie(self.sp.movie)
+                    self.sp.movie.setScaledSize(QSize(35, 35))
+                    self.mu.setMovie(self.mu.movie)
+                    self.mu.movie.setScaledSize(QSize(30, 30))
+                    self.sp.movie.start()
+                    self.sp.movie.stop()
+                    self.mu.movie.start()
             else:
                 if self.bn==False:
                     if self.music_list==len(self.fileslist):
