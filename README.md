@@ -31,9 +31,9 @@ There are two modes (light mode/dark mode) (default light color)
 
 You can drag and drop files to play (non audio files will be automatically filtered)
 
-![1](https://usercontent.githubfast.com/user-images/100999485/214223715-cca294fe-71d8-41b5-8080-2856f1825e1e.png)
+![1](https://user-images.githubusercontent.com/100999485/214250353-f373c04b-d1f2-4762-a9cd-982b242b2511.png)
 
-![2](https://usercontent.githubfast.com/user-images/100999485/214223677-299477c4-9deb-4862-a06a-729d5a09340f.png)
+![2](https://user-images.githubusercontent.com/100999485/214250445-dcb5d0ba-2b36-4082-a342-24855002a9aa.png)
 
 1:When the music is playing, it swings left and right. When it stops, it is still. Left click to call out progress bar 6, and middle click to remove the music being played from the music list
 
