@@ -32,9 +32,9 @@ PyQt5
 
 你可以拖拽文件进行播放(会自动过滤非音频文件)
 
-![1](https://user-images.githubusercontent.com/100999485/214222039-428edd56-59a7-489d-881b-25ba48f7479c.png)
+![1](https://usercontent.githubfast.com/user-images/100999485/214222039-428edd56-59a7-489d-881b-25ba48f7479c.png)
 
-![2](https://user-images.githubusercontent.com/100999485/214222042-fcf57b87-270b-496a-97fb-9bc849a73e89.png)
+![2](https://usercontent.githubfast.com/user-images/100999485/214222042-fcf57b87-270b-496a-97fb-9bc849a73e89.png)
 
 1:当音乐播放时左右摆动，停止时静止。左键呼出进度条6，中键将正在播放的音乐从音乐列表中移除
 
@@ -52,6 +52,6 @@ PyQt5
 
 8:2,3,4在鼠标经过时变成蓝色
 
-更多介绍请查看bilibili
+更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
 
 希望它能够帮助你
