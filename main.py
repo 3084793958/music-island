@@ -2,7 +2,6 @@ import os
 import sys
 import time
 import linecache
-import reqursts
 from PyQt5 import QtCore,QtMultimedia
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
