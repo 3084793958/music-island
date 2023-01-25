@@ -7,3 +7,5 @@ Modulation
 Adjust progress
 Developed system
 Project address
+Switch direction
+Set size
