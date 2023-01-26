@@ -92,6 +92,6 @@ Crypto
 
 8：Music list storage function
 
-For more information, see [bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
+For more information, see [bilibili](https://www.bilibili.com/video/bv1324y1z7PX)
 
 I hope it can help you
