@@ -86,7 +86,7 @@ Crypto
 
 5: Delete music list and delete music list with one click
 
-6: You can download music. The music comes from Netease Cloud (mail.163. com) (rest assured, VIP still can't download it)
+6: You can download music. The music comes from Netease Cloud (music.163. com) (rest assured, VIP still can't download it)
 
 7: Add music file suffix support
 
