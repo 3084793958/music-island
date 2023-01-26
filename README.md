@@ -31,9 +31,9 @@ There are two modes (light mode/dark mode) (default light color)
 
 You can drag and drop files to play (non audio files will be automatically filtered)
 
-![1](https://user-images.githubusercontent.com/100999485/214250353-f373c04b-d1f2-4762-a9cd-982b242b2511.png)
+![1](https://usercontent.githubfast.com/user-images/100999485/214250353-f373c04b-d1f2-4762-a9cd-982b242b2511.png)
 
-![2](https://user-images.githubusercontent.com/100999485/214250445-dcb5d0ba-2b36-4082-a342-24855002a9aa.png)
+![2](https://usercontent.githubfast.com/user-images/100999485/214250445-dcb5d0ba-2b36-4082-a342-24855002a9aa.png)
 
 1:When the music is playing, it swings left and right. When it stops, it is still. Left click to call out progress bar 6, and middle click to remove the music being played from the music list
 
@@ -54,3 +54,42 @@ You can drag and drop files to play (non audio files will be automatically filte
 For more information,please check [bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
 
 I hope it can help you.
+
+
+V1.0.1 update
+
+Add required modules[
+
+magic
+
+requests
+
+json
+
+base64
+
+scrapy
+
+binascii
+
+Crypto
+
+]
+
+1: Size can be set
+
+2: Landscape/portrait can be set
+
+3: Shrink on the left and right sides of the screen, and reserve areas are set at the top and bottom
+
+4: Add 'more settings' option, and call out 5,6
+
+5: Delete music list and delete music list with one click
+
+6: You can download music. The music comes from Netease Cloud (mail.163. com) (rest assured, VIP still can't download it)
+
+7: Add music file suffix support
+
+For more information, see [bilibilibili]（ https://www.bilibili.com/video/bv1tY411D7R6 )
+
+I hope it can help you
