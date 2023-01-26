@@ -90,6 +90,6 @@ Crypto
 
 7: Add music file suffix support
 
-For more information, see [bilibilibili]（ https://www.bilibili.com/video/bv1tY411D7R6 )
+For more information, see [bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
 
 I hope it can help you
