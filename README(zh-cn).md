@@ -93,6 +93,6 @@ Crypto
 
 8:音乐列表存储功能
 
-更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1324y1z7PX)
+更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
 
 希望它能够帮助你
