@@ -91,6 +91,8 @@ Crypto
 
 7:增加音乐文件后缀的支持
 
+8:音乐列表存储功能
+
 更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
 
 希望它能够帮助你
