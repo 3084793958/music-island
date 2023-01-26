@@ -90,6 +90,8 @@ Crypto
 
 7: Add music file suffix support
 
+8：Music list storage function
+
 For more information, see [bilibili](https://www.bilibili.com/video/bv1tY411D7R6)
 
 I hope it can help you
