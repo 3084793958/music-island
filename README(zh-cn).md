@@ -32,9 +32,9 @@ PyQt5
 
 你可以拖拽文件进行播放(会自动过滤非音频文件)
 
-![1](https://user-images.githubusercontent.com/100999485/214250634-c24e2c1c-0ff9-4ef9-9b77-9b4df175e407.png)
+![1](https://usercontent.githubfast.com/user-images/100999485/214250634-c24e2c1c-0ff9-4ef9-9b77-9b4df175e407.png)
 
-![2](https://user-images.githubusercontent.com/100999485/214250673-964ccf75-2745-4fae-8fc3-f96b0c39434a.png)
+![2](https://usercontent.githubfast.com/user-images/100999485/214250673-964ccf75-2745-4fae-8fc3-f96b0c39434a.png)
 
 1:当音乐播放时左右摆动，停止时静止。左键呼出进度条6，中键将正在播放的音乐从音乐列表中移除
 
@@ -58,6 +58,24 @@ PyQt5
 
 
 V1.0.1更新
+
+新增需要的模块[
+
+magic
+
+requests
+
+json
+
+base64
+
+scrapy
+
+binascii
+
+Crypto
+
+]
 
 1:可设置大小
 
