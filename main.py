@@ -2,10 +2,12 @@ import os
 import sys
 import time
 import linecache
+import magic
 from PyQt5 import QtCore,QtMultimedia
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtGui import *
+import files.data.downloads_music
 class MI(QWidget):
     def __init__(self, parent=None):
         super(MI, self).__init__(parent)
@@ -48,6 +50,8 @@ class MI(QWidget):
         icons=os.path.join('files/image/musicrun.gif')
         exit=os.path.join('files/image/exit.svg')
         tab=os.path.join('files/image/setting.svg')
+        more_button = QAction((linecache.getline('files/data/main.txt',12)), self, triggered=self.more_tools)
+        more_button.setIcon(QIcon(tab))
         tab_button = QAction((linecache.getline('files/data/main.txt',1)), self, triggered=self.dark)
         tab_button.setIcon(QIcon(tab))
         quit_button = QAction((linecache.getline('files/data/main.txt',2)), self, triggered=self.quit)
@@ -60,6 +64,7 @@ class MI(QWidget):
         about_i.setIcon(QIcon('files/image/about.svg'))
         self.tray_menu = QMenu(self)
         self.tray_menu.addAction(about_i)
+        self.tray_menu.addAction(more_button)
         self.tray_menu.addAction(tab_button)
         self.tray_menu.addAction(show)
         self.tray_menu.addAction(hint)
@@ -507,7 +512,7 @@ class MI(QWidget):
         self.about.setFixedSize(550,200)
         self.about.text1=QLabel(self.about)
         self.about.text1.setStyleSheet("font-size:20px;")
-        self.about.text1.setText("music-island\n"+(linecache.getline('files/data/main.txt',8)).strip()+":deepin20.8\n"+(linecache.getline('files/data/main.txt',9)).strip()+":")
+        self.about.text1.setText("music-island V1.0.1\n"+(linecache.getline('files/data/main.txt',8)).strip()+":deepin20.8\n"+(linecache.getline('files/data/main.txt',9)).strip()+":")
         self.about.text2=QLabel(self.about)
         self.about.text2.setStyleSheet("font-size:15px;")
         self.about.text2.move(0,100)
@@ -525,7 +530,7 @@ class MI(QWidget):
     def dropEvent(self, event):
         urls=[u for u in event.mimeData().urls()]
         for url in urls:
-            if os.path.splitext(url.path()[1:])[1] in ['.mp3', '.au', '.midi', '.ogg', '.ra', '.ram', '.wav']:
+            if os.path.splitext(url.path()[1:])[1] in ['.mp3', '.au', '.midi', '.ogg', '.ra', '.ram', '.wav', '.m4a', '.flac']:
                 if len(self.fileslist)==0:
                     self.fileslist.append("/"+url.path()[1:])
                     self.play_music.setMedia(QtMultimedia.QMediaContent(QUrl.fromLocalFile((QtCore.QDir.current().absoluteFilePath(self.fileslist[0])))))
@@ -633,6 +638,41 @@ class MI(QWidget):
                     self.movie.jumpToFrame(0)
                     self.movie.jumpToFrame(1)
                     self.movie.stop()
+    def more_tools(self):
+        choose1=['None',linecache.getline('files/data/main.txt',13),linecache.getline('files/data/main.txt',14)]
+        qa1, q1=QInputDialog.getItem(self,linecache.getline('files/data/main.txt',12), linecache.getline('files/data/main.txt',12),choose1)
+        if qa1==linecache.getline('files/data/main.txt',13):
+            self.fileslist=[]
+            self.music_list=0
+            self.play_music.stop()
+            self.QS2.setValue(0)
+        if qa1==linecache.getline('files/data/main.txt',14):
+            qa2, q2=QInputDialog.getText(self,linecache.getline('files/data/main.txt',15), linecache.getline('files/data/main.txt',15))
+            self.downloads=files.data.downloads_music.search()
+            self.downloads.search_song(qa2)
+            if self.downloads.r=='Not Found':
+                qa3, q3=QInputDialog.getText(self,'Not Found')
+            else:
+                qa3, q3=QInputDialog.getItem(self,linecache.getline('files/data/main.txt',16), linecache.getline('files/data/main.txt',16),self.downloads.r)
+                if qa3 !='None':
+                    url='http://music.163.com/song/media/outer/url?id='+str(self.downloads.song_list[self.downloads.r.index(qa3)-1])
+                    url2=str(self.downloads.song_list[self.downloads.r.index(qa3)-1])
+                    os.system('wget '+url+' -P files/data/music_downloads -O files/data/music_downloads/'+str(self.downloads.song_list[self.downloads.r.index(qa3)-1])+'.mp3')
+                    if 'audio' in magic.from_file('files/data/music_downloads/'+url2+'.mp3',mime=True):
+                        if len(self.fileslist)==0:
+                            self.fileslist.append('files/data/music_downloads/'+str(self.downloads.song_list[self.downloads.r.index(qa3)-1])+'.mp3')
+                            self.play_music.setMedia(QtMultimedia.QMediaContent(QUrl.fromLocalFile((QtCore.QDir.current().absoluteFilePath(self.fileslist[0])))))
+                            self.music_list=1
+                        else:
+                            self.fileslist.append('files/data/music_downloads/'+str(self.downloads.song_list[self.downloads.r.index(qa3)-1])+'.mp3')
+                            if self.music_list>len(self.fileslist):
+                                if len(self.fileslist)==0:
+                                    self.music_list=0
+                                else:
+                                    self.music_list=1
+                    else:
+                        qa3, q3=QInputDialog.getText(self,linecache.getline('files/data/main.txt',17),linecache.getline('files/data/main.txt',17))
+                        os.system('rm -rf files/data/music_downloads/'+url2+'.mp3')
 if __name__=='__main__':
     app = QApplication(sys.argv)
     desktop_helper = MI()
