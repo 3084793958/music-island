@@ -112,6 +112,6 @@ V1.0.2更新
 
 图像难以解释，请查看视频(使用githubfast编写，github访问不了)
 
-更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
+更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1ts4y1s7dk)
 
 希望它能够帮助你
