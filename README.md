@@ -95,3 +95,23 @@ Crypto
 For more information, see [bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
 
 I hope it can help you
+
+V1.0.2 update
+
+
+
+1. Show and hide a key
+
+2. Music progress record
+
+3. New and more tools
+
+Visual music list
+
+Integrated components
+
+The image is difficult to interpret, please check the video (written with github fast, github cannot access it)
+
+For more information, see [bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
+
+I hope it can help you
