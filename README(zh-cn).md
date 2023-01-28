@@ -96,3 +96,22 @@ Crypto
 更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
 
 希望它能够帮助你
+
+
+V1.0.2更新
+
+1.显示隐藏结合一个按键
+
+2.音乐进度记录
+
+3.新 更多工具
+
+可视化音乐列表
+
+综合组件
+
+图像难以解释，请查看视频(使用githubfast编写，github访问不了)
+
+更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
+
+希望它能够帮助你
