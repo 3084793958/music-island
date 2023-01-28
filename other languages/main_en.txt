@@ -15,3 +15,5 @@ Downloads
 Music name
 Select music
 No copyright
+Remove from list
+Delete file
