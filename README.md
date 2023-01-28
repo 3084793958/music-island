@@ -112,6 +112,6 @@ Integrated components
 
 The image is difficult to interpret, please check the video (written with github fast, github cannot access it)
 
-For more information, see [bilibili](https://www.bilibili.com/video/bv1eT411y7bK)
+For more information, see [bilibili](https://www.bilibili.com/video/bv1ts4y1s7dk)
 
 I hope it can help you
