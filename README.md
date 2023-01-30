@@ -56,7 +56,7 @@ For more information,please check [bilibili](https://www.bilibili.com/video/bv1t
 I hope it can help you.
 
 
-V1.0.1 update
+# V1.0.1 update
 
 Add required modules[
 
@@ -96,9 +96,7 @@ For more information, see [bilibili](https://www.bilibili.com/video/bv1eT411y7bK
 
 I hope it can help you
 
-V1.0.2 update
-
-
+# V1.0.2 update
 
 1. Show and hide a key
 
