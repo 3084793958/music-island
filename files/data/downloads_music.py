@@ -54,15 +54,16 @@ class search():
         data = self.ep.search(text)
         resp = self.session.post(url, data=data)
         result = resp.json()
-        if result['result']['songCount']<= 0:
-            self.r='Not Found'
-        else:
-            songs = result['result']['songs']
-            self.song_list=[]
-            self.r=['None']
-            for song in songs:
-                self.song_list.append(song['id'])
-                self.r.append(song['name']+' -- '+song['ar'][0]['name'])
+        try:
+            if not result['result']['songCount']<= 0:
+                songs = result['result']['songs']
+                self.song_list=[]
+                self.r=['None']
+                for song in songs:
+                    self.song_list.append(song['id'])
+                    self.r.append(song['name']+' -- '+song['ar'][0]['name'])
+        except:
+            self.r=["Not Found"*3]
 if __name__ == '__main__':
     start=search()
     start.search_song('山丘')
