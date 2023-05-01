@@ -114,3 +114,15 @@ Crypto
 更多介绍请查看[bilibili](https://www.bilibili.com/video/bv1ts4y1s7dk)
 
 希望它能够帮助你
+
+# beta0501更新
+
+## 1.解决爬虫时崩溃的问题
+
+## 2.解决UI错误问题
+
+## 3.重构Menu
+
+### beta版不提供演示、pyinstaller打包(演示没时间作，我还有几个项目没搞，pyinstaller打包大，难上传)
+
+希望它能够帮助你
