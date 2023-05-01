@@ -114,14 +114,14 @@ For more information, see [bilibili](https://www.bilibili.com/video/bv1ts4y1s7dk
 
 I hope it can help you
 
-#Beta0501 update
+# Beta0501 update
 
-##1. Resolve the issue of crashes during crawling
+## 1. Resolve the issue of crashes during crawling
 
-##2. Resolve UI error issues
+## 2. Resolve UI error issues
 
-##3. Refactoring Menu
+## 3. Refactoring Menu
 
-###The beta version does not provide demos or pyinstallers for packaging (there is no time to do the demos, I have a few projects left unfinished, and pyinstallers have a large packaging that is difficult to upload)
+### The beta version does not provide demos or pyinstallers for packaging (there is no time to do the demos, I have a few projects left unfinished, and pyinstallers have a large packaging that is difficult to upload)
 
 I hope it can help you
