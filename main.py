@@ -36,7 +36,7 @@ class MI(QWidget):
         self.QS_c=False
         self.fileslist=[]
         self.move(QApplication.desktop().width()/2-100,10)
-        self.time_id = self.startTimer(1)
+        self.time_id = self.startTimer(100)
         self.mouse=self.cursor()
         self.setAcceptDrops(True)
         self.play_check=QtMultimedia.QMediaPlayer()
@@ -59,6 +59,11 @@ class MI(QWidget):
             self.play_music.pause()
             self.play_music.setVolume(100)
     def initPall(self):
+        more_more_button = QMenu('Tools_Menu',self)
+        start_stop_button = QMenu('Play_Menu',self)
+        play_pause = QAction('play or pause',self,triggered=self.run_stop_together)
+        next_s = QAction('next',self,triggered=self.run_next)
+        back_s = QAction('back',self,triggered=self.run_back)
         more_button = QAction((linecache.getline('files/data/main.txt',12)), self, triggered=self.show_more_about)
         more_button.setIcon(QIcon('files/image/setting.svg'))
         tab_button = QAction((linecache.getline('files/data/main.txt',1)), self, triggered=self.dark)
@@ -71,19 +76,26 @@ class MI(QWidget):
         if self.windowOpacity()>0.95:
             show = QAction((linecache.getline('files/data/main.txt',4)), self, triggered=self.hintmain)
             show.setIcon(QIcon('files/image/hint.svg'))
-        about_i = QAction((linecache.getline('files/data/main.txt',5)), self, triggered=self.show_about)
-        about_i.setIcon(QIcon('files/image/about.svg'))
+        more_more_button.addAction(more_button)
+        more_more_button.addAction(tab_button)
+        more_more_button.addAction(show)
+        start_stop_button.addAction(play_pause)
+        start_stop_button.addAction(next_s)
+        start_stop_button.addAction(back_s)
         self.tray_menu = QMenu(self)
-        self.tray_menu.addAction(about_i)
-        self.tray_menu.addAction(more_button)
-        self.tray_menu.addAction(tab_button)
-        self.tray_menu.addAction(show)
+        self.tray_menu.addMenu(start_stop_button)
+        self.tray_menu.addMenu(more_more_button)
         self.tray_menu.addAction(quit_button)
         self.tray_icon = QSystemTrayIcon(self)
         self.tray_icon.setIcon(QIcon('files/image/musicrun.gif'))
         self.tray_icon.setContextMenu(self.tray_menu)
         self.tray_icon.show()
     def upp1(self):
+        more_more_button = QMenu('Tools_Menu',self)
+        start_stop_button = QMenu('Play_Menu',self)
+        play_pause = QAction('play or pause',self,triggered=self.run_stop_together)
+        next_s = QAction('next',self,triggered=self.run_next)
+        back_s = QAction('back',self,triggered=self.run_back)
         more_button = QAction((linecache.getline('files/data/main.txt',12)), self, triggered=self.show_more_about)
         more_button.setIcon(QIcon('files/image/setting.svg'))
         tab_button = QAction((linecache.getline('files/data/main.txt',1)), self, triggered=self.dark)
@@ -92,17 +104,24 @@ class MI(QWidget):
         quit_button.setIcon(QIcon('files/image/exit.svg'))
         show = QAction((linecache.getline('files/data/main.txt',3)), self, triggered=self.showmain)
         show.setIcon(QIcon('files/image/hidden.svg'))
-        about_i = QAction((linecache.getline('files/data/main.txt',5)), self, triggered=self.show_about)
-        about_i.setIcon(QIcon('files/image/about.svg'))
         self.tray_menu.clear()
-        self.tray_menu.addAction(about_i)
-        self.tray_menu.addAction(more_button)
-        self.tray_menu.addAction(tab_button)
-        self.tray_menu.addAction(show)
+        more_more_button.addAction(more_button)
+        more_more_button.addAction(tab_button)
+        more_more_button.addAction(show)
+        start_stop_button.addAction(play_pause)
+        start_stop_button.addAction(next_s)
+        start_stop_button.addAction(back_s)
+        self.tray_menu.addMenu(start_stop_button)
+        self.tray_menu.addMenu(more_more_button)
         self.tray_menu.addAction(quit_button)
         self.tray_icon.setContextMenu(self.tray_menu)
         self.tray_icon.show()
     def upp2(self):
+        more_more_button = QMenu('Tools_Menu',self)
+        start_stop_button = QMenu('Play_Menu',self)
+        play_pause = QAction('play or pause',self,triggered=self.run_stop_together)
+        next_s = QAction('next',self,triggered=self.run_next)
+        back_s = QAction('back',self,triggered=self.run_back)
         more_button = QAction((linecache.getline('files/data/main.txt',12)), self, triggered=self.show_more_about)
         more_button.setIcon(QIcon('files/image/setting.svg'))
         tab_button = QAction((linecache.getline('files/data/main.txt',1)), self, triggered=self.dark)
@@ -111,13 +130,15 @@ class MI(QWidget):
         quit_button.setIcon(QIcon('files/image/exit.svg'))
         show = QAction((linecache.getline('files/data/main.txt',4)), self, triggered=self.hintmain)
         show.setIcon(QIcon('files/image/hint.svg'))
-        about_i = QAction((linecache.getline('files/data/main.txt',5)), self, triggered=self.show_about)
-        about_i.setIcon(QIcon('files/image/about.svg'))
         self.tray_menu.clear()
-        self.tray_menu.addAction(about_i)
-        self.tray_menu.addAction(more_button)
-        self.tray_menu.addAction(tab_button)
-        self.tray_menu.addAction(show)
+        more_more_button.addAction(more_button)
+        more_more_button.addAction(tab_button)
+        more_more_button.addAction(show)
+        start_stop_button.addAction(play_pause)
+        start_stop_button.addAction(next_s)
+        start_stop_button.addAction(back_s)
+        self.tray_menu.addMenu(start_stop_button)
+        self.tray_menu.addMenu(more_more_button)
         self.tray_menu.addAction(quit_button)
         self.tray_icon.setContextMenu(self.tray_menu)
         self.tray_icon.show()
@@ -474,6 +495,7 @@ class MI(QWidget):
                     if self.play_music.position()/self.play_music.duration()==1:
                         self.QS2.setValue(0)
         if len(self.fileslist)!=0:
+            self.color_b()
             self.more_about.b_b_1.setText(str(os.path.split(self.fileslist[self.now_list*5])[1]))
             if len(self.fileslist)>self.now_list*5+1:
                 self.more_about.b_b_2.setText(str(os.path.split(self.fileslist[self.now_list*5+1])[1]))
@@ -484,19 +506,14 @@ class MI(QWidget):
             if len(self.fileslist)>self.now_list*5+4:
                 self.more_about.b_b_5.setText(str(os.path.split(self.fileslist[self.now_list*5+4])[1]))
             if self.music_list==self.now_list*5+1:
-                self.color_b()
                 self.more_about.b_b_1.setStyleSheet("background-color: rgb(0,255,255)")
             if self.music_list==self.now_list*5+2:
-                self.color_b()
                 self.more_about.b_b_2.setStyleSheet("background-color: rgb(0,255,255)")
             if self.music_list==self.now_list*5+3:
-                self.color_b()
                 self.more_about.b_b_3.setStyleSheet("background-color: rgb(0,255,255)")
             if self.music_list==self.now_list*5+4:
-                self.color_b()
                 self.more_about.b_b_4.setStyleSheet("background-color: rgb(0,255,255)")
             if self.music_list==self.now_list*5+5:
-                self.color_b()
                 self.more_about.b_b_5.setStyleSheet("background-color: rgb(0,255,255)")
         else:
             self.more_about.b_b_1.setText('')
@@ -673,10 +690,10 @@ class MI(QWidget):
         self.about.setWindowTitle((linecache.getline('files/data/main.txt',5)))
         self.about.setWindowIcon(QIcon('files/image/musicrun.gif'))
         self.about.setFixedSize(550,200)
-        self.about.text1=QLabel(self.about)
+        self.about.text1=QTextEdit(self.about)
         self.about.text1.setStyleSheet("font-size:20px;")
-        self.about.text1.setText("music-island V1.0.2\n"+(linecache.getline('files/data/main.txt',8)).strip()+":deepin20.8\n"+(linecache.getline('files/data/main.txt',9)).strip()+":")
-        self.about.text2=QLabel(self.about)
+        self.about.text1.setText("music-island beta0501\n"+(linecache.getline('files/data/main.txt',8)).strip()+":deepin20.8\n"+(linecache.getline('files/data/main.txt',9)).strip()+":")
+        self.about.text2=QTextEdit(self.about)
         self.about.text2.setStyleSheet("font-size:15px;")
         self.about.text2.move(0,100)
         self.about.text2.setText("github:https://github.com/3084793958/music-island.git\n"+"githubfast:https://githubfast.com/3084793958/music-island.git\n"+"gitlab:https://gitlab.com/3084793958/music-island.git")
@@ -751,6 +768,7 @@ class MI(QWidget):
                     self.QS1.showMinimized()
                     self.QS2.showMinimized()
                     self.QS3.showMinimized()
+                    self.upp1()
             if action == about_m:
                 self.show_about()
             if action == size_m:
@@ -891,8 +909,8 @@ class MI(QWidget):
         if qa2!='' and q2:
             self.downloads=files.data.downloads_music.search()
             self.downloads.search_song(qa2)
-            if self.downloads.r=='Not Found':
-                qa3, q3=QInputDialog.getText(self.more_about,'Not Found')
+            if self.downloads.r==["Not Found"*3]:
+                qa3, q3=QInputDialog.getText(self.more_about,"Not Found","Not Found")
             else:
                 del self.downloads.r[0]
                 qa3, q3=QInputDialog.getItem(self.more_about,linecache.getline('files/data/main.txt',16), linecache.getline('files/data/main.txt',16),self.downloads.r)
@@ -1025,12 +1043,70 @@ class MI(QWidget):
         self.sp.movie.gif=1
         self.play_music.play()
         self.sp.setMovie(self.sp.movie)
-        self.sp.movie.setScaledSize(QSize(35*self.QS3.value()/100, 35*self.QS3.value()/100))
+        if not self.hint:
+            self.sp.movie.setScaledSize(QSize(35*self.QS3.value()/100, 35*self.QS3.value()/100))
+        else:
+            self.sp.movie.setScaledSize(QSize(20,20))
         self.mu.setMovie(self.mu.movie)
         self.mu.movie.setScaledSize(QSize(30*self.QS3.value()/100, 30*self.QS3.value()/100))
         self.sp.movie.start()
         self.sp.movie.stop()
         self.mu.movie.start()
+    def run_stop_together(self):
+        if not self.hint:
+            if self.sp.movie.gif==0:
+                    self.sp.movie = QMovie("files/image/stop.gif")
+                    self.mu.movie = QMovie("files/image/musicrun.gif")
+                    self.sp.movie.gif=1
+                    self.play_music.play()
+            else:
+                    self.sp.movie = QMovie("files/image/start.gif")
+                    self.mu.movie = QMovie("files/image/musicstop.gif")
+                    self.sp.movie.gif=0
+                    self.play_music.pause()
+            self.sp.setMovie(self.sp.movie)
+            self.sp.movie.setScaledSize(QSize(35*self.QS3.value()/100, 35*self.QS3.value()/100))
+            self.mu.setMovie(self.mu.movie)
+            self.mu.movie.setScaledSize(QSize(30*self.QS3.value()/100, 30*self.QS3.value()/100))
+            self.sp.movie.start()
+            self.sp.movie.stop()
+            self.mu.movie.start()
+        else:
+            if self.sp.movie.gif==0:
+                    self.sp.movie = QMovie("files/image/stop.gif")
+                    self.mu.movie = QMovie("files/image/musicrun.gif")
+                    self.sp.movie.gif=1
+                    self.play_music.play()
+            else:
+                    self.sp.movie = QMovie("files/image/start.gif")
+                    self.mu.movie = QMovie("files/image/musicstop.gif")
+                    self.sp.movie.gif=0
+                    self.play_music.pause()
+            self.sp.setMovie(self.sp.movie)
+            self.sp.movie.setScaledSize(QSize(20, 20))
+            self.mu.setMovie(self.mu.movie)
+            self.mu.movie.setScaledSize(QSize(30*self.QS3.value()/100, 30*self.QS3.value()/100))
+            self.sp.movie.start()
+            self.sp.movie.stop()
+            self.mu.movie.start()
+    def run_next(self):
+        self.bn=True
+        if self.music_list==len(self.fileslist):
+                    self.music_list=1
+        else:
+                    self.music_list+=1
+        self.play_music.setMedia(QtMultimedia.QMediaContent(QUrl.fromLocalFile((QtCore.QDir.current().absoluteFilePath(self.fileslist[self.music_list-1])))))
+        self.play_music.stop()
+        self.bn=False
+    def run_back(self):
+        self.bn=True
+        if self.music_list==1:
+                    self.music_list=len(self.fileslist)
+        else:
+                    self.music_list-=1
+        self.play_music.setMedia(QtMultimedia.QMediaContent(QUrl.fromLocalFile((QtCore.QDir.current().absoluteFilePath(self.fileslist[self.music_list-1])))))
+        self.play_music.stop()
+        self.bn=False
     def up(self):
         if self.now_list!=0:
             self.now_list-=1
